@@ -24,9 +24,14 @@ def handle_submit(message):
     with st.spinner('Thinking...'):
         response = generate_response(message)
         write_message('assistant', response)
+        
+        
+        # the below repeats my message
+        """
         from time import sleep
         sleep(1)
         write_message('assistant', message)
+        """
 
 
 # Display messages in Session State
